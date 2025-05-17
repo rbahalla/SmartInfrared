@@ -7,7 +7,7 @@
   "targets": {
     ".NETCoreApp,Version=v6.0": {},
     ".NETCoreApp,Version=v6.0/win-x64": {
-      "SmartInfraredSystem/1.0.0": {
+      "SmartInfraredSystem/1.1.0": {
         "dependencies": {
           "Microsoft.Extensions.Configuration": "8.0.0",
           "Microsoft.Extensions.Configuration.Binder": "8.0.2",
@@ -2573,7 +2573,7 @@
     }
   },
   "libraries": {
-    "SmartInfraredSystem/1.0.0": {
+    "SmartInfraredSystem/1.1.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
