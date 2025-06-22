@@ -7,7 +7,7 @@
   "targets": {
     ".NETCoreApp,Version=v6.0": {},
     ".NETCoreApp,Version=v6.0/win-x64": {
-      "SmartInfraredSystem/1.1.1.0": {
+      "SmartInfraredSystem/1.1.0.0": {
         "dependencies": {
           "Autoupdater.NET.Official": "1.9.2",
           "Microsoft.Extensions.Configuration": "8.0.0",
@@ -16,6 +16,7 @@
           "SmarttechDB": "1.0.0",
           "System.Text.Encoding": "4.3.0",
           "System.Text.Encoding.CodePages": "9.0.0-preview.4.24266.19",
+          "Updater": "1.0.0",
           "iTextSharp": "5.5.13.4",
           "itext7": "9.1.0",
           "runtimepack.Microsoft.NETCore.App.Runtime.win-x64": "6.0.28",
@@ -2667,11 +2668,16 @@
         "runtime": {
           "SmarttechDB.dll": {}
         }
+      },
+      "Updater/1.0.0": {
+        "runtime": {
+          "Updater.exe": {}
+        }
       }
     }
   },
   "libraries": {
-    "SmartInfraredSystem/1.1.1.0": {
+    "SmartInfraredSystem/1.1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -3793,6 +3799,11 @@
       "hashPath": "system.xml.xmldocument.4.3.0.nupkg.sha512"
     },
     "SmarttechDB/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Updater/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
