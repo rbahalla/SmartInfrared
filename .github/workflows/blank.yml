@@ -1,0 +1,31 @@
+name: Create Release from Version.txt
+
+on:
+  push:
+    tags:
+      - 'v*'   # Adjust trigger as needed
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Get release title from Version.txt
+        id: title
+        run: |
+          TITLE=$(head -n 1 Version.txt)
+          echo "TITLE=$TITLE" >> $GITHUB_ENV
+
+      - name: Create Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release create "${GITHUB_REF#refs/tags/}" \
+            --repo="$GITHUB_REPOSITORY" \
+            --title="$TITLE" \
+            --notes="Automatic release"
